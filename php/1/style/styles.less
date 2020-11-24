@@ -1,0 +1,104 @@
+@import "colors";
+@import "utils";
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  font-family: 'Lato', sans-serif;
+}
+
+html, body {
+  height: 100%;
+}
+
+.user {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 40%;
+  min-width: 400px;
+  display: flex;
+  flex-direction: column;
+  font-size: 1.1rem;
+  padding: 40px 30px;
+  .box-shadow(-2px 4px 12px 1px rgba(0, 0, 0, 0.25));
+
+  &__element {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    margin: 10px 0;
+
+    &--title {
+      font-weight: bold;
+
+      &:after {
+        content: "*";
+        color: @red;
+      }
+    }
+
+    &--radio {
+      justify-content: space-around;
+      display: flex;
+    }
+
+    &--phone {
+      position: relative;
+      margin-top: 10px;
+
+      &:before {
+        content: "Only used for questions related to your order";
+        height: 10px;
+        color: @grey;
+        text-align: center;
+        font-size: 0.625rem;
+        position: absolute;
+        width: 100%;
+        top: -20px;
+      }
+    }
+
+    &--zipcode {
+      width: 50% !important;
+    }
+
+    input {
+      box-sizing: border-box;
+      width: 100%;
+      border: 1px solid @border-color;
+      outline: none;
+      font-size: 1rem;
+      padding: 5px 8px;
+    }
+  }
+
+  &__submit {
+    color: @white;
+    background-color: @blue;
+    padding: 10px 20px;
+    font-weight: bold;
+    align-self: center;
+    outline: none;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken(@blue, 10%);
+    }
+  }
+
+  .required-star {
+    color: @red;
+  }
+}
+
+.user .user__element:nth-child(7) .user__element--title:after {
+  content: " ";
+}
+
