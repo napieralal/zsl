@@ -13,13 +13,14 @@
       $x=0;
       for($i=1;$i<count($_POST);$i++)
       {
-        if(!empty($_POST["osoba$i"]))
+        if(!empty($_POST["osoba$i"]&&!is_numeric($_POST["osoba$i"])))
         {
         $x++;
         echo "Osoba $i: ",$_POST["osoba$i"],"<br><br>";
     }
   }
 }else if (!empty($_POST['family'])){
+  if($_POST['family']>0&&is_numeric($_POST['family'])){
   echo '<h4>Ilosc czlonkow: ',$_POST['family'],'</h4>';
   ?>
   <form method="post">
@@ -27,11 +28,12 @@
   for($i=1;$i<=$_POST['family'];$i++)
   {
   echo "<input type=\"text\" placeholder=\"Osoba$i\" name=\"osoba$i\" value=\"\"><br><br>";
-
   }
   ?>
-  <br><br><input type="submit" value="zatwierdz" name="button">
+  <br><br>
+  <input type="submit" value="zatwierdz" name="button">
 </form><?php
+}
 }
 else{
   header('location: ./');
