@@ -23,7 +23,7 @@ int main()
         }
     }
     else {
-        cout << "Nie uda³o sie";
+        cout << "Nie udaÅ‚o sie";
     }
     wczyt.close();
     return 0;
