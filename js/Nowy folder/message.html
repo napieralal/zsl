@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .pair{
+            display:inline;
+            color:red;
+            font-weight:bold;
+        }
+        .odd{
+            display:inline;
+            color:blue;
+            text-decoration:underline;
+        }
+    </style>
+</head>
+<body>
+    <!-- ZADANIE 1 -->
+    <p id="name"> Marcin Dobierski</p>
+    <br>
+    <p id="numbers"></p>
+
+    <script>
+        let name=document.getElementById('name');
+        let numbers=document.getElementById('numbers');
+        name.onclick=function(){
+           let num1=prompt("Podaj pierwszą wartość","");
+           let num2=prompt("Podaj drugą wartość","");
+           let mono="";
+           if(num1==num2){
+               numbers.innerHTML="zbiór jednoelementowy: "+num1;
+           }
+           else if(num1>num2){
+                mono="ciąg malejący: ";
+                numbers.innerHTML=mono;
+                for(num1;num1>=num2;num1--){    
+                    if(num1%2==0){ 
+                        numbers.innerHTML+='<p class="pair" style="width:max-content;">'+num1+'</p>'+', ';
+                    }
+                    else{
+                        numbers.innerHTML+='<p class="odd" style="width:max-content;">'+num1+'</p>'+', ';
+                    }
+                }
+            }
+            else{
+                mono="ciąg rosnący: ";
+                numbers.innerHTML=mono;
+                for(num1;num1<=num2;num1++){    
+                    if(num1%2==0){ 
+                        numbers.innerHTML+='<p class="pair" style="width:max-content;">'+num1+'</p>'+', ';
+                    }
+                    else{
+                        numbers.innerHTML+='<p class="odd" style="width:max-content;">'+num1+'</p>'+', ';
+                    }
+                }
+            }
+        }
+    </script>
+    <hr>
+    
+    <hr>
+    <!-- ZADANIE 3 -->
+    <input type='text' id='t1' placeholder="color"/><br><br>
+    <input type='text' id='t2' placeholder="font size"/><br><br>
+    <input type='text' id='t3' placeholder="font family"/><br><br>
+    <button id="send">zobacz efekt</button>
+    <p id="content2"></p>
+    <script>
+        let snd=document.getElementById('send');
+        let cont2=document.getElementById('content2');
+        let t1=document.getElementById('t1');
+        let t2=document.getElementById('t2');
+        let t3=document.getElementById('t3');
+        snd.onclick=function(){
+            cont2.style.color=t1.value;
+            cont2.style.fontSize=parseInt(t2.value)+'px';
+            cont2.style.fontFamily=t3.value;
+            cont2.innerHTML="Marcin Dobierski";
+            t1.value="";
+            t2.value="";
+            t3.value="";
+        }
+    </script>
+</body>
+</html>
