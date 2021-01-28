@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            background-color: cornsilk;
+        }
+        td{
+            border: 1px solid rgb(75, 13, 218);
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr style="color: crimson; font-weight: bold;background-color: rgb(255, 234, 148);">
+            <td>Instrukcja z tabeli</td>
+            <td >Wynik działania</td>
+            <td>Wyjaśnienie</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik1.innerHTML=(tekst.big());</td>
+            <td id="wynik1">a</td>
+            <td>Zwiększa rozmiar czcionki; odpowiednik znacznika "<"big"><"/big"></td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik2.innerHTML=(tekst.bold());
+            </td>
+            <td id="wynik2">b</td>
+            <td>Tekst pogrubiony; odpowiednik znacznika "<"b"><"/b">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik3.innerHTML=(tekst.italics());
+            </td>
+            <td id="wynik3">a</td>
+            <td>Tekst pochylony; odpowiednik znacznika "<"i"><"/i">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik4.innerHTML=(tekst.small());
+            </td>
+            <td id="wynik4">a</td>
+            <td>Zmniejsza rozmiar czcionki; odpowiednik znacznika "<"small"><"/small">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik5.innerHTML=("Tekst"+tekst.sub());
+            </td>
+            <td id="wynik5">a</td>
+            <td>Indeks dolny; odpowiednik znacznika "<"sub"><"/sub">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik6.innerHTML=(tekst.strike());
+            </td>
+            <td id="wynik6">a</td>
+            <td>Tekst przekreslony; odpowiednik znacznika "<"strike"><"/strike">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik7.innerHTML=("Tekst"+tekst.sup());
+            </td>
+            <td id="wynik7">a</td>
+            <td>Indeks górny; odpowiednik znacznika "<"sup"><"/sup">"</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik8.innerHTML=(tekst.fontcolor("red"));
+            </td>
+            <td id="wynik8">a</td>
+            <td>Ustawia kolor czcionki (tekstu) na kolor</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik9.innerHTML=(tekst.fontsize(5));
+            </td>
+            <td id="wynik9">a</td>
+            <td>Ustawia rozmiar czcionki na wartość rozmiar</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik10.innerHTML=(tekst.charAt(2));
+            </td>
+            <td id="wynik10">a</td>
+            <td>Zwraca znak pozycji określonej przezindeks(pierwsza pozycja to 0)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik11.innerHTML=(tekst.charCodeAt(2));
+            </td>
+            <td id="wynik11">a</td>
+            <td>zwraca kod ASCIIznaku występującego na określonej pozycji</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik12.innerHTML=(tekst.indexOf("a"));
+            </td>
+            <td id="wynik12">a</td>
+            <td>Przeszukuje łańcuch w poszukiwaniu podłańcucha i zwraca pozycję pierwszego znalezionego znaku(wielkość liter jest istotna, gdy tekst nie występuje zwracana jest wartość -1, drugi argument opcjonalny</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik13.innerHTML=(tekst.lastIndexOf("a"));
+            </td>
+            <td id="wynik13">a</td>
+            <td>Przeszukuje łańcuch w poszukiwaniu podłańcucha w kierunku przeciwnym, czyli od końca i  zwraca pozycję, od której zaczyna się tekst (wielkość liter jest istotna, gdy tekst nie występuje zwracana jest wartość -1, drugi argument opcjonalny)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik14.innerHTML=(tekst.match("a"));
+            </td>
+            <td id="wynik14">a</td>
+            <td>podobne do indexOf(), ale zamiast pozycji zwraca tekst (null jeśli tekst nie występuje w ciągu, wielkość liter ma znaczenie)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik15.innerHTML=(tekst.substring(4, 8));
+            </td>
+            <td id="wynik15">a</td>
+            <td>Zwraca podłańcuch wycięty z łańcucha od pozycji x do pozycji y</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik16.innerHTML=(tekst.substr(-3, 6));
+            </td>
+            <td id="wynik16">a</td>
+            <td>wycina z łańcucha liczbę znaków długość począwszy od pozycji x (ujemna wartość pierwszego argumentu oznacza pozycję od końca, drugi argument opcjonalny –brak= koniec łańcucha)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik17.innerHTML=(tekst.slice(1, 8));
+            </td>
+            <td id="wynik17">a</td>
+            <td>Wycina fragmentu łańcucha od pozycji x do pozycji y (obydwa argumenty numeryczne, wartość ujemna oznacza pozycję od końca, musi być spełniony warunek x<y, drugi argument opcjonalny–brak oznacza, że y= koniec łańcucha)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik18.innerHTML=(tekst.split("m", 3));
+            </td>
+            <td id="wynik18">a</td>
+            <td>Dzieli tekst na części. Miejsce podziału jest podawane w parametrze znak, a maksymalna ilość zwracanych elementów w parametrze długość (IE pomija ten parametr):</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik19.innerHTML=(tekst.toLowerCase());
+            </td>
+            <td id="wynik19">a</td>
+            <td>Konwertuje znaki łańcucha na małe litery</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik20.innerHTML=(tekst.toUpperCase());
+            </td>
+            <td id="wynik20">a</td>
+            <td>Konwertuje znaki łańcucha na wielkie litery</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik21.innerHTML=(tekst.link("index.html"));
+            </td>
+            <td id="wynik21">a</td>
+            <td>Tekst będzie wyświetlony jako hiperłącze do dokumentu o adresie url</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota"<br>
+                var tekst1=" i niebieski dom";<br>
+                wynik22.innerHTML=(tekst.concat(tekst1));</td>
+            <td id="wynik22">a</td>
+            <td>Dodaje do obiektu łańcuchy znakowe będące argumentami metody (musi wystąpić co najmniej jeden argument)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik23.innerHTML=(tekst.replace("Ala ma kota", "Ala nie ma kota"));
+            </td>
+            <td id="wynik23">a</td>
+            <td>Zamiana w danym łańcuchu podłańcucha stary_tekst na nowy_tekst (wielkość liter jest istotna)</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota";<br>
+                wynik24.innerHTML=(tekst.search("ma"));
+            </td>
+            <td id="wynik24">a</td>
+            <td>Przeszukuje tekst pod kątem występowania w nim podanego wzorca -wyrażenia regularnego. Jeżeli tekst nie zostanie dopasowany, funkcja zwraca liczbę -1.Pierwszy znak tekstu ma pozycję 0, a więc taka wartość zwrócona przez funkcję oznacza, że poszukiwany tekst został znaleziony (na samym początku).Informacje natemat wyrażeń regularnych znajdziesz np. pod linkiem: http://kursjs.pl/kurs/regular.php</td>
+        </tr>
+        <tr>
+            <td>var tekst="Ala ma kota"
+                wynik25.innerHTML=(tekst.length);</td>
+            <td id="wynik25">a</td>
+            <td>Zwraca długość podanego tekstu</td>
+        </tr>
+    </table>
+    <script>
+        var wynik1=document.getElementById("wynik1")
+        var wynik2=document.getElementById("wynik2")
+        var wynik3=document.getElementById("wynik3")
+        var wynik4=document.getElementById("wynik4")
+        var wynik5=document.getElementById("wynik5")
+        var wynik6=document.getElementById("wynik6")
+        var wynik7=document.getElementById("wynik7")
+        var wynik8=document.getElementById("wynik8")
+        var wynik9=document.getElementById("wynik9")
+        var wynik10=document.getElementById("wynik10")
+        var wynik11=document.getElementById("wynik11")
+        var wynik12=document.getElementById("wynik12")
+        var wynik13=document.getElementById("wynik13")
+        var wynik14=document.getElementById("wynik14")
+        var wynik15=document.getElementById("wynik15")
+        var wynik16=document.getElementById("wynik16")
+        var wynik17=document.getElementById("wynik17")
+        var wynik18=document.getElementById("wynik18")
+        var wynik19=document.getElementById("wynik19")
+        var wynik20=document.getElementById("wynik20")
+        var wynik21=document.getElementById("wynik21")
+        var wynik22=document.getElementById("wynik22")
+        var wynik23=document.getElementById("wynik23")
+        var wynik24=document.getElementById("wynik24")
+        var wynik25=document.getElementById("wynik25")
+        var tekst="Ala ma kota";
+        wynik1.innerHTML=(tekst.big());
+        wynik2.innerHTML=(tekst.bold());
+        wynik3.innerHTML=(tekst.italics());
+        wynik4.innerHTML=(tekst.small());
+        wynik5.innerHTML=("Tekst"+tekst.sub());
+        wynik6.innerHTML=(tekst.strike());
+        wynik7.innerHTML=("Tekst"+tekst.sup());
+        wynik8.innerHTML=(tekst.fontcolor("red"));
+        wynik9.innerHTML=(tekst.fontsize(5));
+        wynik10.innerHTML=(tekst.charAt(2));
+        wynik11.innerHTML=(tekst.charCodeAt(2));
+        wynik12.innerHTML=(tekst.indexOf("a"));
+        wynik13.innerHTML=(tekst.lastIndexOf("a"));
+        wynik14.innerHTML=(tekst.match("a"));
+        wynik15.innerHTML=(tekst.substring(4, 8));
+        wynik16.innerHTML=(tekst.substr(-3, 6));
+        wynik17.innerHTML=(tekst.slice(1, 8));
+        wynik18.innerHTML=(tekst.split("m", 3));
+        wynik19.innerHTML=(tekst.toLowerCase());
+        wynik20.innerHTML=(tekst.toUpperCase());
+        wynik21.innerHTML=(tekst.link("index.html"));
+        var tekst1=" i niebieski dom";
+        wynik22.innerHTML=(tekst.concat(tekst1));
+        wynik23.innerHTML=(tekst.replace("Ala ma kota", "Ala nie ma kota"));
+        wynik24.innerHTML=(tekst.search("ma"));
+        wynik25.innerHTML=(tekst.length);
+
+    </script>
+</body>
+</html>
