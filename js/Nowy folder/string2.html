@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            text-align: center;
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            background-color: cornsilk;
+        }
+        div{
+            height: 100px;
+            width: 10%;
+            border: 1px solid rgb(75, 13, 218);
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" placeholder="Podaj hasło" id="haslo">
+    <input type="button" value="OK" id="button">
+    <div>
+        <span id="wynik"></span>
+    </div>
+    <script>
+        var haslo=document.getElementById("haslo").value;
+        var wynik=document.getElementById("wynik");
+        var button=document.getElementById("button");
+        button.onclick=function(){
+        wynik.innerHTML=" ";
+       
+        if(haslo.length==0)
+        {
+           
+        wynik.innerHTML="Wprowadź hasło";
+        }
+        else if(haslo.length<5)
+        {
+          
+            wynik.innerHTML="Hasło jest za krótkie";
+        }
+        else if(haslo.length>5)
+        {
+           
+            wynik.innerHTML="Hasło Poprawne, podałeś hasło "+haslo.toUpperCase();
+        }
+        }
+    </script>
+</body>
+</html>
