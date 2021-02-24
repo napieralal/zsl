@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 33%;
+            height: 300px;
+            border: 1px solid black;
+            float: left;
+        }
+		date1{
+		color:red;
+		}
+    </style>
+</head>
+<body>
+    <div>Dzisiaj jest:<br>
+        Dzień: <p id="day"></p>
+        Miesiąc: <p id="month"></p>
+        Rok: <p id="year"></p>
+    </div>
+    <div><p id="date"></p></div>
+    <div><p id="date1"></p></div>
+    <script>
+        var day=document.getElementById("day");
+        var month=document.getElementById("month");
+        var year=document.getElementById("year");
+        var date=document.getElementById("date");
+		var date1=document.getElementById("date1");
+        var now=new Date()
+        document.write(now);
+        year.innerHTML=now.getFullYear()
+        day.innerHTML=now.getDate()
+        var months = ["1", "2", "3", "4", "5", "6", "7",
+         "8", "9", "10", "11", "12"];
+        month.innerHTML=months[now.getMonth()]
+        var months = ["Styczeń", "Luty", "Marzec", "Kwiecień", "Maj", "Czerwiec", "Lipiec",
+         "Sierpień", "Wrzesień", "Październik", "Listopad", "Grudzień"];
+        date.innerHTML+=now.getDate()+' ';
+        date.innerHTML+=months[now.getMonth()];
+		date.innerHTML+=" "+now.getFullYear()+" roku";
+		date1.innerHTML+=now.getDate()+' ';
+        date1.innerHTML+=months[now.getMonth()];
+		date1.innerHTML+=" "+now.getFullYear()+"r., ";
+		var days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"];
+		date1.innerHTML+=days[now.getDay()]+" ";
+		date1.innerHTML+=now.getHours()+":";
+		date1.innerHTML+=now.getMinutes()+":";
+		date1.innerHTML+=now.getSeconds();
+    </script>
+</body>
+</html>
