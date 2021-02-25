@@ -10,7 +10,7 @@
     <h3>Clients</h3>
     <?php
     $connect=new mysqli('localhost','root','','shop');
-    $sql="SELECT * FROM `clients`";
+    $sql="SELECT * FROM `clients` inner join `tbl_countries` on `clients`.`Country`=`tbl_countries`.`CountryID";
     $result=$connect->query($sql);
     while($row=$result->fetch_assoc())
     {
@@ -21,6 +21,7 @@
         <b>Name</b>: $row[name]
         <b>NIP</b>: $row[NIP]
         <b>Postal Code</b>: $row[Postal_code]
+        <b>Country</b>: $row[CountryName]
         <b>City</b>: $row[City]
         <b>Street and house number</b>: $row[Street_house_nr]
         <hr>
