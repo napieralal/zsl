@@ -10,6 +10,7 @@
             border:1px solid black;
             border-collapse:collapse;
             text-align:center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -33,7 +34,7 @@
          <td>$row[weight]</td>
          <td>$row[color]</td>
          </tr>
-Products;        
+Products;
     }
     ?>
     </table>

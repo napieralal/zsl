@@ -10,6 +10,7 @@
             border:1px solid black;
             border-collapse:collapse;
             text-align:center;
+            padding: 10px;
         }
     </style>
 </head>
@@ -27,13 +28,13 @@
     while($row=$result->fetch_assoc())
     {
         echo <<< Sales
-        <tr>      
+        <tr>
          <td> $row[client_id]</td>
          <td> $row[date]</td>
          <td> $row[transport]</td>
-         <td> $row[date_collection]</td> 
+         <td> $row[date_collection]</td>
          </tr>
-Sales;        
+Sales;
     }
     ?>
     </table>
