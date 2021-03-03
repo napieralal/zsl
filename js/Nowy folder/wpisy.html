@@ -43,21 +43,32 @@
         <input type="button" value="Dodaj wpis" id="but">
     </div><br>
     <div id="div2">
-        <h4>Wpisane wyrazy odzielone przecinkiem</h4>
+        <h4>Wpisane wyrazy odzielone przecinkiem: </h4>
         <span id="tekst"></span>
     </div>
     <script>
+        var wpis=document.getElementById("wpis");
         var but=document.getElementById("but");
         var tekst= document.getElementById("tekst");
         var a=[];
         var i=0;
-        but.onclick=function(){
+        but.onclick=function()
+        {
             if(wpis!=0)
         {
-            var wpis=document.getElementById("wpis").value;
-            a.push(wpis);
-            tekst.innerHTML+=a[0].toUpperCase()+",";
+            tekst.innerHTML="";
+            a.push(wpis.value);
             a.sort();
+            for(var i=0;i<a.length;i++)
+        {
+            a[i]=a[i].toLowerCase();
+            a[i]=a[i].charAt(0).toUpperCase()+a[i].slice(1);
+            tekst.innerHTML+=a[i];
+            if(i<a.length-1)
+            {
+                tekst.innerHTML+=", ";
+            }
+        }
             wpis.value="";
             wpis.focus();
         }
