@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #div1{
+        background-color: rgb(59, 59, 218);
+        margin: auto;
+        border-radius: 15%;
+        height: 200px;
+        width: 500px;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        }
+        #div2{
+        border: 1px solid rgb(85, 85, 201);
+        background-color: white;
+        margin: auto;
+        border-radius: 20%;
+        height: 100px;
+        width: 500px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        }
+        #but{
+            background-color: greenyellow;
+            border-radius: 10%;
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        <h3>Dodaj wpis</h3><br>
+        <input type="text" placeholder="Dodaj wpis" id="wpis" required><br><br>
+        <input type="button" value="Dodaj wpis" id="but">
+    </div><br>
+    <div id="div2">
+        <h4>Wpisane wyrazy odzielone przecinkiem</h4>
+        <span id="tekst"></span>
+    </div>
+    <script>
+        var but=document.getElementById("but");
+        var tekst= document.getElementById("tekst");
+        var a=[];
+        var i=0;
+        but.onclick=function(){
+            if(wpis!=0)
+        {
+            var wpis=document.getElementById("wpis").value;
+            a.push(wpis);
+            tekst.innerHTML+=a[0].toUpperCase()+",";
+            a.sort();
+            wpis.value="";
+            wpis.focus();
+        }
+    }
+    </script>
+</body>
+</html>
