@@ -30,21 +30,19 @@
         var wynik=document.getElementById("wynik");
         var button=document.getElementById("button");
         button.onclick=function(){
-        wynik.innerHTML=" ";
-       
         if(haslo.length==0)
         {
-           
+        wynik.innerHTML=" ";
         wynik.innerHTML="Wprowadź hasło";
         }
         else if(haslo.length<5)
         {
-          
+            wynik.innerHTML=" ";
             wynik.innerHTML="Hasło jest za krótkie";
         }
         else if(haslo.length>5)
         {
-           
+            wynik.innerHTML=" ";
             wynik.innerHTML="Hasło Poprawne, podałeś hasło "+haslo.toUpperCase();
         }
         }
