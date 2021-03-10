@@ -8,43 +8,124 @@
     <style>
         #main{
             width: 80%;
-            height: 400px;
+            height: auto;
             margin: auto;
             border: 1px solid black;
-            padding: 5px;
         }
         #first{
             margin: auto;
             width: 100%;
             height: 200px;
-            border: 1px dashed blue;
             display: block;
-            padding: 1px;
-
+            text-align: center;
+        }
+        .arrleft, .arrright{
+            border: 1px solid black;
+            width: 5%;
+            height: 100%;
+            position: inherit;
+            display: inline-block;
+        }
+        .left,.center,.right{
+            border: 1px solid black;
+            width: 29%;
+            height: 100%;
+            display: inline-block;
         }
         #second{
             width: 100%;
-            height: 200px;
+            height: 50%;
             margin: auto;
-            border: 1px dashed red;
             display: block;
             text-align: center;
-            padding: 1px;
+            border: 1px solid black;
         }
-        img{
-            padding: 5px;
+        .second{
+            width: 150px;
+            height: 150px;
+            margin: auto;
         }
     </style>
 </head>
 <body>
     <div id="main">
-        <div id="first"></div>
+        <div id="first">
+        <div class="arrleft"><=</div>
+        <div class="left"></div>
+        <div class="center"></div>
+        <div class="right"></div>
+        <div class="arrright">=></div>
+    </div>
         <div id="second">
-        <img src="C:\Users\Lukas\Desktop\aaa\simps.jpeg">
+        <div class="second"></div>
         </div>
     </div>
+    </div>
     <script>
-
+        var arrleft=document.querySelector(".arrleft");
+        var left=document.querySelector(".left");
+        var center=document.querySelector(".center");
+        var right=document.querySelector(".right");
+        var arrright=document.querySelector(".arrright");
+        var second=document.querySelector(".second");
+        var a=1;
+        var photos=[
+        '<img src="./simps.jpg" />',
+        '<img src="./chleb.jpg" />',
+        '<img src="./rudy.jpg" />',
+        '<img src="./playboy.jpg" />',
+        '<img src="./znak.png" />'
+        ];
+        left.innerHTML=photos[a-1];
+        center.innerHTML=photos[a];
+        right.innerHTML=photos[a+1];
+        second.innerHTML=photos[a];
+        arrleft.onclick=()=>{
+            a--;
+            if(a<0)
+            {
+                a=4;
+                left.innerHTML=photos[3];
+                center.innerHTML=photos[4];
+                right.innerHTML=photos[0];
+                second.innerHTML=photos[4];
+            }
+            else if(a==0){
+            left.innerHTML=photos[4];
+            center.innerHTML=photos[0];
+            right.innerHTML=photos[1];
+            second.innerHTML=photos[0];
+            }
+            else{
+            left.innerHTML=photos[a-1];
+            center.innerHTML=photos[a];
+            right.innerHTML=photos[a+1];
+            second.innerHTML=photos[a];
+            }
+        }
+        arrright.onclick=()=>{
+            a++;
+            if(a>4)
+            {
+                a=0;
+                left.innerHTML=photos[4];
+                center.innerHTML=photos[0];
+                right.innerHTML=photos[1];
+                second.innerHTML=photos[0];
+            }
+            else if(a==4){
+            left.innerHTML=photos[3];
+            center.innerHTML=photos[4];
+            right.innerHTML=photos[0];
+            second.innerHTML=photos[4];
+            }
+            else{
+            left.innerHTML=photos[a-1];
+            center.innerHTML=photos[a];
+            right.innerHTML=photos[a+1];
+            second.innerHTML=photos[a];
+            }
+        }
     </script>
 </body>
 </html>
