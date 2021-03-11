@@ -1,0 +1,28 @@
+<html>
+<head>
+<style>
+
+</style>
+</head>
+<body>
+
+	<input type="text" id="color"/><br>
+	<input type="text" id="type"/><br>
+	<input type="text" id="size"/><br>
+	<input type="submit" id="button"/><br>
+	<p id="tekst"></p>
+	<script>
+	var button=document.getElementById('button')
+	var text1=document.getElementById('color')
+	var text2=document.getElementById('type')
+	var text3=document.getElementById('size')
+	var tekst=document.getElementById('tekst')
+	button.onclick=function(){
+			tekst.style.color=text1.value;
+			tekst.style.fontSize=parseInt(text2.value)+'px';
+			tekst.style.fontFamily=text3.value;
+            tekst.innerHTML="Łukasz Napierała"; 
+	}
+</script>
+</body>
+</html>

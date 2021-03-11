@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<style>
+#container{
+ text-align:center;
+}
+</style>
+<body>
+    <div id="container">
+    <div id="pole1">
+    </div>
+    <div id="plus">
+        +
+    </div>
+    <div id="pole2">
+        
+    </div>
+    <div id="result">
+        =
+    </div>
+    <input type="number" id="i">
+    <input type="button" value="Prześlij" id="button"><br>
+</div>
+    <script>
+        var pole1 = document.getElementById("pole1");
+        var pole2 = document.getElementById("pole2");
+        var i = document.getElementById("i");
+        var button = document.getElementById("button")
+        var liczba1=Math.floor(Math.random()*10+1);
+        var liczba2=Math.floor(Math.random()*10+1);
+        pole1.innerHTML = liczba1;
+        pole2.innerHTML = liczba2;
+        var suma= liczba1+liczba2;
+        button.onclick = function(){
+            var i = document.getElementById("i");
+            if(suma==i.value){
+                i.style.backgroundColor = "green";
+                i.style.color = "white";
+                i.style.border = "none";
+				i.onclick = function(){ window.location.reload()}
+            }
+            else{
+                i.style.backgroundColor = "red";
+                i.style.color = "white";
+                i.style.border = "none";
+                
+            }
+        }     
+    </script>
+</body>
+</html>
