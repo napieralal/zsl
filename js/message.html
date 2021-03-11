@@ -19,7 +19,7 @@
 </head>
 <body>
     <!-- ZADANIE 1 -->
-    <p id="name"> Marcin Dobierski</p>
+    <p id="name"> Łukasz Napierała</p>
     <br>
     <p id="numbers"></p>
 
@@ -36,8 +36,8 @@
            else if(num1>num2){
                 mono="ciąg malejący: ";
                 numbers.innerHTML=mono;
-                for(num1;num1>=num2;num1--){    
-                    if(num1%2==0){ 
+                for(num1;num1>=num2;num1--){
+                    if(num1%2==0){
                         numbers.innerHTML+='<p class="pair" style="width:max-content;">'+num1+'</p>'+', ';
                     }
                     else{
@@ -48,8 +48,8 @@
             else{
                 mono="ciąg rosnący: ";
                 numbers.innerHTML=mono;
-                for(num1;num1<=num2;num1++){    
-                    if(num1%2==0){ 
+                for(num1;num1<=num2;num1++){
+                    if(num1%2==0){
                         numbers.innerHTML+='<p class="pair" style="width:max-content;">'+num1+'</p>'+', ';
                     }
                     else{
@@ -60,7 +60,7 @@
         }
     </script>
     <hr>
-    
+
     <hr>
     <!-- ZADANIE 3 -->
     <input type='text' id='t1' placeholder="color"/><br><br>
@@ -78,7 +78,7 @@
             cont2.style.color=t1.value;
             cont2.style.fontSize=parseInt(t2.value)+'px';
             cont2.style.fontFamily=t3.value;
-            cont2.innerHTML="Marcin Dobierski";
+            cont2.innerHTML="Łukasz Napierała";
             t1.value="";
             t2.value="";
             t3.value="";
