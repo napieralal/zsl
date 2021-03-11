@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 20px;
+            color: black;
+        }
+        .a1{
+        font-size: small;
+        display: inline-block;
+        }
+        .a1,.a2,.a3:hover{
+            cursor: pointer;
+        }
+        .a2{
+            font-size: medium;
+            display: inline-block;
+        }
+        .a3{
+        font-size: large;
+        display: inline-block;
+        }
+        .text{
+            display: block;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-align: left;
+            padding: 5px;
+            font-size: 1em;
+            width: 50%;
+            background-color: rgb(161, 158, 158);
+        }
+    </style>
+</head>
+<body>
+    <div class="a1">A</div>
+    <div class="a2">A</div>
+    <div class="a3">A</div>
+    <div class="text"><h2>Lorem</h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus illum earum repellat ullam harum enim suscipit expedita! Accusantium illum, ex magni asperiores minima iste reprehenderit modi impedit eveniet, autem harum?</div>
+    <script>
+        let a1=document.querySelector(".a1");
+        let a2=document.querySelector(".a2");
+        let a3=document.querySelector(".a3");
+        let text=document.querySelector(".text");
+        a1.onclick=()=>{
+            text.style.fontSize="small";
+        }
+        a2.onclick=()=>{
+            text.style.fontSize="medium";
+        }
+        a3.onclick=()=>{
+            text.style.fontSize="large";
+        }
+        a1.onmouseover=()=>{
+            a1.style.color="red";
+        }
+        a1.onmouseout=()=>{
+            a1.style.color="black";
+        }
+        a2.onmouseover=()=>{
+            a2.style.color="red";
+        }
+        a2.onmouseout=()=>{
+            a2.style.color="black";
+        }
+        a3.onmouseover=()=>{
+            a3.style.color="red";
+        }
+        a3.onmouseout=()=>{
+            a3.style.color="black";
+        }
+    </script>
+</body>
+</html>
