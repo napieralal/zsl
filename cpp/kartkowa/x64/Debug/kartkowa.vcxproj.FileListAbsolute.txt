@@ -1,0 +1,2 @@
+H:\source\repos\kartkowa\x64\Debug\kartkowa.exe
+H:\source\repos\kartkowa\x64\Debug\kartkowa.pdb
