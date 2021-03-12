@@ -1,0 +1,5 @@
+﻿  maturka.cpp
+H:\source\repos\maturka\maturka.cpp(18,36): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+H:\source\repos\maturka\maturka.cpp(45,40): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+H:\source\repos\maturka\maturka.cpp(53,21): warning C4101: 'x': unreferenced local variable
+  maturka.vcxproj -> H:\source\repos\maturka\x64\Debug\maturka.exe
