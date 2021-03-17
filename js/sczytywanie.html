@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    div{
+        width: auto;
+        height: auto;
+        border: 1px solid white;
+    }
+</style>
+</head>
+<body>
+    <input type="text" class="name"><br>
+    <select class="klasa">
+        <option value="3b2t">3b2t</option>
+        <option value="3b1t">3b1t</option>
+        <option value="3b3t">3b3t</option>
+    </select><br>
+    <input type="radio" value="red" name="color">Czerwony<br>
+    <input type="radio" value="blue" name="color">Niebieski<br>
+    <input type="radio" value="green" name="color">Zielony<br>
+    <input type="checkbox"  value="bold" class="bold">Pogrubienie<br>
+    <input type="checkbox"  value="em" class="em">Kursywa<br>
+    <input type="checkbox"  value="u" class="u">Podkreślenie<br>
+    <input type="button" value="Zatwierdź" class="but">
+    <div class="div"></div>
+<script>
+    let name=document.querySelector('.name');
+    let klasa=document.querySelector('.klasa');
+    let color=document.getElementsByName('color');
+    let style=document.querySelector('.bold');
+    let style1=document.querySelector('.em');
+    let style2=document.querySelector('.u');
+    let div=document.querySelector('.div');
+    let but=document.querySelector('.but')
+but.onclick=()=>{
+div.innerHTML="Witaj: ";
+div.innerHTML+=name.value;
+div.innerHTML+=" w klasie ";
+div.innerHTML+=klasa.value+"!!!";
+for(var i=0;i<color.length;i++)
+{
+    if(color[i].checked)
+    {
+    div.style.color=color[i].value;
+    }
+}
+if(style.checked)
+{
+    div.style.fontWeight="bold";
+}
+else div.style=fontWeight="100";
+if(style1.checked)
+{
+    div.style.fontStyle="italic";
+}
+else div.style.fontStyle="normal";
+if(style2.checked)
+{
+    div.style.textDecoration="underline";
+}
+else div.style.textDecoration="none";
+}
+</script>
+</body>
+</html>
