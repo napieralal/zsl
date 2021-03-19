@@ -5,6 +5,7 @@
         #kontener{
             width: 1000px;
             margin: auto;
+
         }
         #baner{
             background-color: #99FF66;
@@ -19,8 +20,7 @@
         #div1,#div2,#div3{
             width: 310px;
             padding: 10px;
-            display: inline-block;
-
+            display: inline-table;
         }
         #footer{
             background-color: #66CCFF;
