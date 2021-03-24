@@ -21,24 +21,51 @@
             <h3>Formularz kontaktowy</h3>
             <table>
                 <form>
-                    <tr><td>Imię: </td><td><input type="text"></td></tr>
-                    <tr><td>Nazwisko: </td><td><input type="text"></td></tr>
-                    <tr><td>E-mail: </td><td><input type="text"></td></tr>
+                    <tr><td>Imię: </td><td><input type="text" id="name"></td></tr>
+                    <tr><td>Nazwisko: </td><td><input type="text" id="surname"></td></tr>
+                    <tr><td>E-mail: </td><td><input type="text" id="email"></td></tr>
                     <tr><td>
-                        Usługa:  </td><td> <select><option value="">naprawa komputera</option>
-                    <option value="">odzyskiwanie danych</option>
-                    <option value="">problemy z oprogramowaniem</option>
-                    <option value="">konfiguracja sieci LAN</option>
-                    <option value="">inne</option></select></td></tr>
-                    <tr><td><input type="checkbox" name="" id=""></td><td>Wyślij kopię wiadomości</td></tr>
-                    <tr><td><input type="button" id="reset" value="Resetuj"></td>
-                    <td><input type="submit" id="submit" value="Prześlij"></td></tr>
+                    Usługa:  </td><td> <select id="usluga">
+                    <option value="naprawa komputera">naprawa komputera</option>
+                    <option value="odzyskiwanie danych">odzyskiwanie danych</option>
+                    <option value="problemy z oprogramowaniem">problemy z oprogramowaniem</option>
+                    <option value="konfiguracja sieci LAN">konfiguracja sieci LAN</option>
+                    <option value="inne">inne</option></select></td></tr>
+                    <tr></tr><td><input type="checkbox" checked></td><td>Wyślij kopię wiadomości</td></tr>
+                    <tr><td><input type="reset" id="reset" value="Resetuj"></td>
+                    <td><input type="button" id="submit" value="Prześlij"></td></tr>
                 </form>
             </table>
+            <p id="linia1"></p>
+            <p id="linia2"></p>
+            <p id="linia3"></p>
         </div>
         <div id="footer">
             <p>Autor strony: <b>Łukasz Napierała</b></p>
         </div>
     </div>
+<script>
+    let button=document.querySelector('#submit')
+    let reset=document.querySelector('#rest')
+    let name = document.querySelector('#name')
+    let surname = document.querySelector('#surname')
+    let email = document.querySelector('#email')
+    let usluga = document.querySelector('#usluga')
+    let linia1=document.querySelector('#linia1')
+    let linia2=document.querySelector('#linia2')
+    let linia3=document.querySelector('#linia3')
+    button.onclick=()=>{
+        linia1.innerHTML=" "
+        linia2.innerHTML=" "
+        linia3.innerHTML=" "
+        linia1.innerHTML=name.value
+        linia1.innerHTML+=" "
+        linia1.innerHTML+=surname.value
+        linia2.innerHTML=email.value.toLowerCase()
+        linia3.innerHTML+="Usługa: "+usluga.value
+    }
+    reset.onclick=()=>{
+    }
+</script>
 </body>
 </html>
