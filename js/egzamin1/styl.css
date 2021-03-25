@@ -5,7 +5,16 @@
         #kontener{
             width: 1000px;
             margin: auto;
-
+        }
+        table{
+            display: block;
+            width: 30%;
+            margin: 0 auto;
+        }
+        #linia1,#linia2,#linia3{
+            display: block;
+            width: 30%;
+            margin: 0 auto;
         }
         #baner{
             background-color: #99FF66;
