@@ -1,21 +1,26 @@
 <?php
 
 session_start();
-
-//print_r($_POST);
-
+require_once './connect.php';
 foreach ($_POST as $key => $value)
 {
     if(empty($value)){
-        //echo $key;
-        //header('location: customers.php');
         $_SESSION['error']='Wypelnij wszystkie dane!';
-        echo "<script>history.back()</script>";
-        exit();
+        header('location: ./customers.php');
     }
     ${$key} = $value;
 }
-echo "$name $surname $birthday $postalCode $city $street $nip";
 
-require_once 'connect.php';
+$sql = "INSERT INTO `clients` (`id_client`, `city_id`, `surname`, `name`, `NIP`, 'Postal_code', `Street_house_nr`, `birthday`, `create_user`)
+VALUES (NULL, '$city', '$surname', '$name', '$nip', '$postalCode', '$street', '$birthday', current_timestamp());";
+$connect->query($sql);
+
+if($connect->affected_rows != -1)
+{
+    header("location ../customers.php?add_user=1&name=$name&surname=$surname");
+}
+else{
+    header("location ../customers.php?add_user=0");
+}
+
 ?>

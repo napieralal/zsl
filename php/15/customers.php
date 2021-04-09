@@ -76,24 +76,45 @@ Info;
     </table><hr>
     <h4>Dodawanie użytkownika</h4>
     <?php
+
 if(isset($_SESSION['error']))
 {
     echo '<div id="czerwony"><h4>',$_SESSION['error'],'</h4></div>';
     unset($_SESSION['error']);
 }
-
+    if(isset($_GET['add_user']))
+    {
+    if($_GET['add_user'] == 1)
+    {
+        echo "<h4>Dodano użytkownika: $_GET[name] $_GET[surname]</h4>";
+    }
+    else{
+        echo "<h4>Nie dodano użytkownika</h4>";
+    }
+    }
     echo <<<FORMADDUSER
     <form action="add_user.php" method="POST">
     <input type="text" name="name" placeholder="Imie"><br><br>
     <input type="text" name="surname" placeholder="Nazwisko"><br><br>
     <input type="date" name="birthday" placeholder="Data urodzenia"><br><br>
     <input type="number" name="postalCode" placeholder="Kod pocztowy"><br><br>
+    FORMADDUSER;
+
+    $sql2 = "SELECT `city`,`city_id`,`state` from `cities` inner join `states` on `cities`.`state_id`=`states`.`state_id`";
+    $result2 = $connect->query($sql2);
+    echo '<select name="city">';
+    while($row = $result2->fetch_assoc()){
+        echo "<option value=\"$row[city_id]\">$row[city] / $row[state]</option>";
+    }
+    echo <<<FORMADDUSER
+    </select><br><br>
     <input type="text" name="city" placeholder="Miasto"><br><br>
     <input type="text" name="street" placeholder="Ulica"><br><br>
     <input type="number" name="nip" placeholder="NIP"><br><br>
     <input type="submit" value="Dodaj użytkownika"><br>
     </form>
 FORMADDUSER;
+$connect->close();
 ?>
 </body>
 </html>
