@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Overflow</title>
+    <style>
+        div{
+            width: 500px;
+            height: 20px;
+            background-color: rgb(201, 78, 78);
+            overflow: hidden;
+            padding: 10px;
+            margin : 1px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        najedź żeby rozwinąć: >><br><br>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+    </div>
+    <div id="div2">
+        kliknij żeby rozwinąć: >><br><br>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+    </div>
+    <div id="div3">
+        kliknij dwukrotnie żeby rozwinąć: >><br><br>Lorem Ipsum jest tekstem stosowanym jako przykładowy wypełniacz w przemyśle poligraficznym. Został po raz pierwszy użyty w XV w. przez nieznanego drukarza do wypełnienia tekstem próbnej książki. Pięć wieków później zaczął być używany przemyśle elektronicznym, pozostając praktycznie niezmienionym. Spopularyzował się w latach 60. XX w. wraz z publikacją arkuszy Letrasetu, zawierających fragmenty Lorem Ipsum, a ostatnio z zawierającym różne wersje Lorem Ipsum oprogramowaniem przeznaczonym do realizacji druków na komputerach osobistych, jak Aldus PageMaker
+    </div>
+<script>
+let div1 = document.querySelector("#div1");
+let div2 = document.querySelector("#div2");
+let div3= document.querySelector("#div3");
+let i = 0;
+let data = new Date();
+let data1 = new Date();
+let data2 = new Date();
+data=data.getHours();
+data1=data1.getMinutes();
+data2=data2.getSeconds();
+div1.onmouseover=()=>{
+    if(i==0)
+    {
+    div1.style.overflow='visible';
+    div1.style.height="200px";
+    div1.style.transition="height 1s";
+    i++;
+    }
+    else 
+    {
+    div1.style.overflow='hidden';
+    div1.style.height="20px";
+    i=0;
+    }
+}
+div2.onclick=()=>{
+    if(i==0){
+    div2.style.overflow='visible';
+    div2.style.height="205px";
+    div2.style.transition="height 1s";
+    i=1;
+    }
+    else
+    {
+        div2.style.overflow='hidden';
+    div2.style.height="20px";
+    i=0;
+    }
+}
+div2.innerHTML+="<br>"+data+":"+data1+":"+data2;
+div3.ondblclick=()=>{
+    if(i==0){
+    div3.style.overflow='visible';
+    div3.style.height="200px";
+    div3.style.transition="height 1s";
+    i=1;
+    }
+    else{
+        div3.style.overflow='hidden';
+    div3.style.height="20px";
+    i=0;
+    }
+}
+</script>
+</body>
+</html>
