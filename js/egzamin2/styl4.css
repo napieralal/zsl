@@ -1,0 +1,40 @@
+body{
+    font-family: Arial;
+}
+#logo{
+    background-color: rgb(162, 117, 87);
+    width: 20%;
+    height: 100px;
+}
+#menu{
+    background-color: rgb(162, 117, 87);
+    width: 40%;
+    height: 100px;
+    text-align: right;
+}
+#baner,#stopka{
+    background-color: rgb(74, 45, 32);
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+#lewy,#prawy{
+    background-color: rgb(162, 117, 87);
+    color: white;
+    width: 50%;
+    height: 500px;
+}
+h1{
+    letter-spacing: 10px;
+}
+a{
+    color: rgb(65, 98, 85);
+    padding: 20px;
+    margin: 10px;
+    font-size: 150%;
+    border: 1px solid rgb(65, 98, 85);
+    line-height: 100px;
+}
+#cztery{
+    text-decoration: line-through;
+}
