@@ -2,30 +2,28 @@ let but=document.querySelector("#but");
 let coffenr=document.querySelector("#coffenr");
 let coffewg=document.querySelector("#coffewg");
 let wynik=document.querySelector("#wynik");
-document.write(coffenr)
-document.write(coffenr.value);
-but.onclick=()=>{
-    if(coffenr==1||coffenr==2||coffenr==3)
+but.onclick=()=>
+{
+    if(coffenr.value==1||coffenr.value==2||coffenr.value==3)
     {
-        if(coffenr==1)
+        if(coffenr.value==1)
         {
-            let a = 5*coffewg;
+            let a = 5*coffewg.value;
             wynik.innerHTML="Koszt zamówienia wynosi "+a+" zł";
         }
-        else if(coffenr==2)
+        else if(coffenr.value==2)
         {
-            let a = 7*coffewg;
+            let a = 7*coffewg.value;
             wynik.innerHTML="Koszt zamówienia wynosi "+a+" zł";
         }
-        else if(coffenr==3)
+        else if(coffenr.value==3)
         {
-            let a = 6*coffewg;
+            let a = 6*coffewg.value;
             wynik.innerHTML="Koszt zamówienia wynosi "+a+" zł";
         }
     }
     else
     {
-        let a = 0*coffewg;
-            wynik.innerHTML="Koszt zamówienia wynosi "+a+" zł";
+            wynik.innerHTML="Koszt zamówienia wynosi 0 zł";
     }
 }

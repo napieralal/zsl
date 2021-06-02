@@ -2,27 +2,36 @@ body{
     font-family: Arial;
 }
 #logo{
+    margin: 0;
     background-color: rgb(162, 117, 87);
     width: 20%;
     height: 100px;
+    float: left;
 }
 #menu{
+    margin: 0;
     background-color: rgb(162, 117, 87);
-    width: 40%;
+    width: 80%;
     height: 100px;
     text-align: right;
+    float: left;
 }
 #baner,#stopka{
+    margin: 0;
+    width: 100%;
     background-color: rgb(74, 45, 32);
     color: white;
-    text-align: center;
     padding: 30px;
+    text-align: center;
+    display: inline-block;
 }
 #lewy,#prawy{
+    margin: 0;
     background-color: rgb(162, 117, 87);
     color: white;
     width: 50%;
     height: 500px;
+    float: left;
 }
 h1{
     letter-spacing: 10px;
